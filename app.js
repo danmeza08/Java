@@ -1,3 +1,21 @@
+const express = require('express');
+const app = express();
+
+const books = [
+    {
+        'id': 1,
+        'title': 'La hojarasca',
+        'description': 'Good one',
+        'author': 'Gabo'
+    },
+    {
+        'id': 2,
+        'title': 'El coronel no tiene quien le escriba',
+        'description': 'Interesting',
+        'author': 'Gabo'
+    }
+];
+
 // Get all books
 app.get('/books', (req, res) => {
     res.json({'books': books});
